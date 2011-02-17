@@ -443,23 +443,18 @@ Thingiview = function(containerId) {
         plane.flipSided = false;
       }
     } else if (dir == 'side') {
-      // camera.position.y = 100;
-      // camera.position.z = -0.1;
-      // camera.position.z = 10;
-      // camera.target.position.z = 50;
-
-      // if (object) {
-      //   object.rotation.x = -0.75;
-      // }
-      // 
-      // if (showPlane) {
-      //   plane.rotation.x = -0.75;
-      // }
-
       camera.position.y = -70;
       camera.position.z = 70;
-      targetYRotation = -4.5;
-
+      targetYRotation = -4.0;
+      targetXRotation = -9.5;
+      camera.target.position.z = 0;
+      if (showPlane) {
+        plane.flipSided = false;
+      }
+    } else if (dir == 'front') {
+      camera.position.y = -70;
+      camera.position.z = 70;
+      targetYRotation = -4.0;
       camera.target.position.z = 0;
       if (showPlane) {
         plane.flipSided = false;
@@ -475,7 +470,7 @@ Thingiview = function(containerId) {
     } else {
       camera.position.y = -70;
       camera.position.z = 70;
-
+      targetXRotation = -9.5;
       camera.target.position.z = 0;
       if (showPlane) {
         plane.flipSided = false;
